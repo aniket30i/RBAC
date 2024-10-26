@@ -1,4 +1,5 @@
 import React from "react";
+import CustomDropdown from "./Dropdown";
 
 const LoginBackground = () => {
   return (
@@ -10,29 +11,27 @@ const LoginBackground = () => {
       </div>
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-300 p-4">
         <div className="bg-slate-500 p-4">
-          <p className="text-white text-2xl">Welcome Back</p>
           <div className="flex">
             <div>PIC</div>
             <div className="border-2 border-emarald-700 min-h-[500px] min-w-[300px]">
+              <div className="flex flex-col gap-8 pt-8">
+                <h4 className="text-white text-4xl">Welcome Back</h4>
+                <p>Login as Admin/User to continue.</p>
+              </div>
+
               <form action="" className="flex flex-col gap-4 mt-12">
-                <div className="flex justify-center">
-                  <select
-                    id="role"
-                    className="px-5 border-none rounded-xl w-2/3 h-10"
-                  >
-                    <option value="" disabled selected>
-                      Choose a role
-                    </option>
-                    <option value="admin" className="rounded-xl">
-                      Admin
-                    </option>
-                    <option value="user">User</option>
-                  </select>
-                </div>
+                <CustomDropdown />
+                <input
+                  type="text"
+                  placeholder="Enter Username"
+                  className="fieldset"
+                />
 
-                <input type="text" placeholder="Enter Username" className="" />
-
-                <input type="password" placeholder="Enter Password" />
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  className="fieldset"
+                />
               </form>
               <button className="p-3 px-10 rounded-2xl bg-orange-500">
                 Login
