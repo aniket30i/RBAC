@@ -6,6 +6,7 @@ export const employees = [
     employmentType: "Admin",
     monthOfJoining: "January",
     workAssigned: "Administrative duties",
+    status: "Active",
   },
   {
     name: "Bob Smith",
@@ -14,6 +15,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "February",
     workAssigned: "Data entry",
+    status: "Active",
   },
   {
     name: "Carla Gomez",
@@ -22,6 +24,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "March",
     workAssigned: "Customer support",
+    status: "Active",
   },
   {
     name: "David Wong",
@@ -30,6 +33,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "April",
     workAssigned: "Inventory management",
+    status: "Active",
   },
   {
     name: "Eve Lewis",
@@ -38,6 +42,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "May",
     workAssigned: "Social media management",
+    status: "Active",
   },
   {
     name: "Frank Martin",
@@ -46,6 +51,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "June",
     workAssigned: "Order processing",
+    status: "Active",
   },
   {
     name: "Grace Lee",
@@ -54,6 +60,7 @@ export const employees = [
     employmentType: "Admin",
     monthOfJoining: "July",
     workAssigned: "Administrative duties",
+    status: "Active",
   },
   {
     name: "Hank Kim",
@@ -62,6 +69,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "August",
     workAssigned: "Product packaging",
+    status: "Active",
   },
   {
     name: "Ivy Chen",
@@ -70,6 +78,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "September",
     workAssigned: "Customer service",
+    status: "Active",
   },
   {
     name: "Jake Brown",
@@ -78,6 +87,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "October",
     workAssigned: "Shipping coordination",
+    status: "Active",
   },
   {
     name: "Karen White",
@@ -86,6 +96,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "November",
     workAssigned: "Warehouse organization",
+    status: "Active",
   },
   {
     name: "Liam Davis",
@@ -94,6 +105,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "December",
     workAssigned: "Product labeling",
+    status: "Active",
   },
   {
     name: "Mona Harris",
@@ -102,6 +114,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "January",
     workAssigned: "Inventory checks",
+    status: "Active",
   },
   {
     name: "Nina Clarke",
@@ -110,6 +123,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "February",
     workAssigned: "Customer follow-ups",
+    status: "Active",
   },
   {
     name: "Oscar Miller",
@@ -118,6 +132,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "March",
     workAssigned: "Data analysis",
+    status: "Active",
   },
   {
     name: "Paula Robinson",
@@ -126,6 +141,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "April",
     workAssigned: "Stock taking",
+    status: "Active",
   },
   {
     name: "Quinn Parker",
@@ -134,6 +150,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "May",
     workAssigned: "Customer complaints handling",
+    status: "Active",
   },
   {
     name: "Rita Lee",
@@ -142,6 +159,7 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "June",
     workAssigned: "Technical support",
+    status: "Active",
   },
   {
     name: "Sam Turner",
@@ -150,6 +168,7 @@ export const employees = [
     employmentType: "Admin",
     monthOfJoining: "July",
     workAssigned: "Administrative duties",
+    status: "Offline",
   },
   {
     name: "Tina Morgan",
@@ -158,5 +177,6 @@ export const employees = [
     employmentType: "User",
     monthOfJoining: "August",
     workAssigned: "Order verification",
+    status: "Offline",
   },
 ];

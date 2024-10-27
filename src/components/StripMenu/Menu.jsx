@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import graph from "../../assets/icons/graph.png";
 import status from "../../assets/icons/status.png";
 import Context from "../../context/context";
-const Menu = () => {
+const Menu = ({ clickedIcon }) => {
   const [hoveredIcon, setHoveredIcon] = useState("");
   const { setClickedIcon } = useContext(Context);
   return (
@@ -10,7 +10,9 @@ const Menu = () => {
       <div className="flex flex-col gap-20">
         <div className="flex flex-col justify-between gap-2 text-white relative">
           <div
-            className="iconCustom"
+            className={`iconCustom ${
+              clickedIcon === "graph" && "border-b-2 border-orange-500"
+            }`}
             onMouseEnter={() => setHoveredIcon("graph")}
             onMouseLeave={() => setHoveredIcon("")}
             onClick={() => setClickedIcon("graph")}
@@ -18,7 +20,9 @@ const Menu = () => {
             <img src={graph} alt="graph" className="invert h-10 w-10 " />
           </div>
           <div
-            className="iconCustom "
+            className={`iconCustom  ${
+              clickedIcon === "status" && "border-b-2 border-orange-500"
+            } `}
             onMouseEnter={() => setHoveredIcon("status")}
             onMouseLeave={() => setHoveredIcon("")}
             onClick={() => setClickedIcon("status")}

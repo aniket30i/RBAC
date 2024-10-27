@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { employees } from "../../data/employees";
 
 // Register components with ChartJS
 ChartJS.register(
@@ -23,24 +24,12 @@ ChartJS.register(
   Legend
 );
 
-const employees = [
-  { name: "Alice", monthOfJoining: "January" },
-  { name: "Bob", monthOfJoining: "February" },
-  { name: "Carla", monthOfJoining: "January" },
-  { name: "David", monthOfJoining: "March" },
-  { name: "Eve", monthOfJoining: "February" },
-  { name: "Frank", monthOfJoining: "April" },
-  { name: "Grace", monthOfJoining: "May" },
-  { name: "Hank", monthOfJoining: "June" },
-  { name: "Ivy", monthOfJoining: "January" },
-  { name: "Jake", monthOfJoining: "May" },
-];
-
 const employeeCounts = employees.reduce((counts, employee) => {
   const month = employee.monthOfJoining;
   counts[month] = (counts[month] || 0) + 1;
   return counts;
 }, {});
+
 const Graph = () => {
   const months = [
     "January",
@@ -60,11 +49,11 @@ const Graph = () => {
     labels: months,
     datasets: [
       {
-        label: "Employees Joined",
+        label: "Employees Growth 2024",
         data: months.map((month) => employeeCounts[month] || 0),
-        fill: true,
-        backgroundColor: "rgb(255, 99, 132)",
-        borderColor: "rgba(255, 99, 132, 0.2)",
+        fill: false,
+        backgroundColor: "#EA580C",
+        borderColor: "#EA580C",
       },
     ],
   };
