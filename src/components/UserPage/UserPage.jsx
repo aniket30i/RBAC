@@ -1,6 +1,9 @@
 import Menu from "../StripMenu/Menu";
+import { useContext } from "react";
+import Context from "../../context/context";
 
 const UserPage = () => {
+  const { clickedIcon } = useContext(Context);
   return (
     <div className="relative  bg-zinc-950 h-screen">
       <div className="flex justify-center items-center w-full pt-10 xl:text-[4rem] md:text-5xl font-semibold ">
@@ -11,7 +14,6 @@ const UserPage = () => {
           </span>
         </h1>
       </div>
-
       <Menu />
     </div>
   );
