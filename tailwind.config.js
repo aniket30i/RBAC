@@ -6,7 +6,11 @@ export default {
       fontFamily: {
         sans: ["Questrial", "sans-serif"], // set Questrial as default sans font
       },
+      screens: {
+        "custom-xl": "1650px",
+        xs: "425px",
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 };

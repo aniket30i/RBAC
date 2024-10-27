@@ -17,7 +17,7 @@ const CustomDropdown = () => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex w-64 justify-between rounded-2xl bg-white border border-gray-300 px-4 py-2 text-gray-700 shadow-sm text-lg font-semibold hover:bg-gray-100 focus:outline-none"
+          className="inline-flex w-full justify-between rounded-2xl bg-white border border-gray-300 px-4 py-2 text-gray-700 shadow-sm text-lg font-semibold hover:bg-gray-100 focus:outline-none"
         >
           {selectedOption}
           <span className="ml-2">&#x25BC;</span>
