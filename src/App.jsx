@@ -1,11 +1,14 @@
 import "./App.css";
 import LoginBackground from "./components/Login/LoginBackground";
+import Provider from "./context/provider";
 
 function App() {
   return (
-    <div>
-      <LoginBackground />
-    </div>
+    <Provider>
+      <div>
+        <LoginBackground />
+      </div>
+    </Provider>
   );
 }
 

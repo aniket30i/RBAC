@@ -1,13 +1,18 @@
 import { useState } from "react";
+import { useContext } from "react";
+import Context from "../../context/context";
 
 const CustomDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Choose a role");
 
+  const { setUserType } = useContext(Context);
+
   const options = ["Admin", "User"];
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+    setUserType(option);
     setIsOpen(false);
   };
 
@@ -17,7 +22,7 @@ const CustomDropdown = () => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex w-full justify-between rounded-2xl bg-white border border-gray-300 px-4 py-2 text-gray-700 shadow-sm text-lg font-semibold hover:bg-gray-100 focus:outline-none"
+          className="inline-flex w-full justify-between rounded-2xl bg-white border border-gray-300 px-4 py-2 text-gray-700 shadow-sm text-lg font-semibold hover:bg-orange-300 focus:outline-none"
         >
           {selectedOption}
           <span className="ml-2">&#x25BC;</span>
@@ -30,7 +35,7 @@ const CustomDropdown = () => {
             <li
               key={index}
               onClick={() => handleOptionClick(option)}
-              className="cursor-pointer px-4 py-2 hover:bg-gray-200 rounded-lg"
+              className="cursor-pointer px-4 py-2 hover:bg-orange-300 rounded-lg"
             >
               {option}
             </li>

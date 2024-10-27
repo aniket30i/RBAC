@@ -1,6 +1,10 @@
 import FrontImage from "../../assets/loginside.jpg";
 import CustomDropdown from "./Dropdown";
+import { useContext } from "react";
+import Context from "../../context/context";
 const LoginForm = () => {
+  const { userType } = useContext(Context);
+  console.log(userType);
   return (
     <div>
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  p-6 bg-zinc-950/10 rounded-xl">
