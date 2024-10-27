@@ -6,3 +6,7 @@
 .fieldset {
   @apply border-none rounded-2xl px-3 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-orange-500;
 }
+
+.iconCustom {
+  @apply rounded-lg px-3 p-1 hover:bg-zinc-800;
+}

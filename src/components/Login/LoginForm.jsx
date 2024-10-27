@@ -1,4 +1,4 @@
-import FrontImage from "../../assets/loginside.jpg";
+import FrontImage from "../../assets/pic/loginside.jpg";
 import CustomDropdown from "./Dropdown";
 import { useContext, useEffect } from "react";
 import Context from "../../context/context";
@@ -27,9 +27,6 @@ const LoginForm = () => {
     }
   };
 
-  const showtoast = () => {
-    toast("Login Successful");
-  };
   return (
     <div>
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  p-6 bg-zinc-950/10 rounded-xl">
@@ -38,7 +35,7 @@ const LoginForm = () => {
             <div className="xl:w-1/2 md:hidden xl:block">
               <img
                 src={FrontImage}
-                alt=""
+                alt="An office building"
                 className="w-full rounded-lg lg:h-[500px]"
               />
             </div>
