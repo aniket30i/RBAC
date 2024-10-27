@@ -3,6 +3,7 @@ import CustomDropdown from "./Dropdown";
 import { useContext, useEffect } from "react";
 import Context from "../../context/context";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const LoginForm = () => {
   const { userType, setUserType } = useContext(Context);
   const navigate = useNavigate();
@@ -21,7 +22,13 @@ const LoginForm = () => {
       if (userType === "User") {
         navigate("/user");
       }
+    } else {
+      toast.error("Please choose a role");
     }
+  };
+
+  const showtoast = () => {
+    toast("Login Successful");
   };
   return (
     <div>
@@ -69,6 +76,9 @@ const LoginForm = () => {
           </div>
         </div>
       </div>
+      <button onClick={showtoast} className="">
+        Toast
+      </button>
     </div>
   );
 };
