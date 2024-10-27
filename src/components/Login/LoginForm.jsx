@@ -1,10 +1,28 @@
 import FrontImage from "../../assets/loginside.jpg";
 import CustomDropdown from "./Dropdown";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Context from "../../context/context";
+import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
-  const { userType } = useContext(Context);
+  const { userType, setUserType } = useContext(Context);
+  const navigate = useNavigate();
   console.log(userType);
+
+  useEffect(() => {
+    setUserType("");
+  }, [setUserType]);
+
+  const handleLogin = () => {
+    console.log("login clicked");
+    if (userType) {
+      if (userType === "Admin") {
+        navigate("/admin");
+      }
+      if (userType === "User") {
+        navigate("/user");
+      }
+    }
+  };
   return (
     <div>
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  p-6 bg-zinc-950/10 rounded-xl">
@@ -41,7 +59,10 @@ const LoginForm = () => {
                   className="fieldset"
                 />
               </form>
-              <button className="py-3 px-10 rounded-2xl w-full mt-12 text-xl text-slate-100 bg-orange-500 hover:bg-orange-600 transition duration-300">
+              <button
+                className="py-3 px-10 rounded-2xl w-full mt-12 text-xl text-slate-100 bg-orange-500 hover:bg-orange-600 transition duration-300"
+                onClick={handleLogin}
+              >
                 Login
               </button>
             </div>
