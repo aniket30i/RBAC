@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import graph from "../../assets/icons/graph.png";
 import status from "../../assets/icons/status.png";
 import Context from "../../context/context";
-const Menu = ({ clickedIcon }) => {
+const Menu = ({ clickedIcon, UserType }) => {
   const [hoveredIcon, setHoveredIcon] = useState("");
   const { setClickedIcon } = useContext(Context);
   return (
@@ -11,11 +11,11 @@ const Menu = ({ clickedIcon }) => {
         <div className="flex flex-col justify-between gap-2 text-white relative">
           <div
             className={`iconCustom ${
-              clickedIcon === "graph" && "border-b-2 border-orange-500"
+              clickedIcon === "overview" && "border-b-2 border-orange-500"
             }`}
-            onMouseEnter={() => setHoveredIcon("graph")}
+            onMouseEnter={() => setHoveredIcon("overview")}
             onMouseLeave={() => setHoveredIcon("")}
-            onClick={() => setClickedIcon("graph")}
+            onClick={() => setClickedIcon("overview")}
           >
             <img src={graph} alt="graph" className="invert h-10 w-10 " />
           </div>
@@ -32,7 +32,7 @@ const Menu = ({ clickedIcon }) => {
           {hoveredIcon && (
             <div
               className={`absolute ${
-                hoveredIcon === "graph" ? "top-[10px]" : "top-[65px]"
+                hoveredIcon === "overview" ? "top-[10px]" : "top-[65px]"
               } left-[80px] text-white bg-orange-500/80 px-5 rounded-md z-10 `}
             >
               <p className="text-lg font-semibold text-black ">{hoveredIcon}</p>
