@@ -76,9 +76,6 @@ const LoginForm = () => {
           </div>
         </div>
       </div>
-      <button onClick={showtoast} className="">
-        Toast
-      </button>
     </div>
   );
 };
