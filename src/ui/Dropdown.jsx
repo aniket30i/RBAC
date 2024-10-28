@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { useContext } from "react";
-import Context from "../../context/context";
+import Context from "../context/context";
 
-const CustomDropdown = () => {
+const CustomDropdown = ({ options, defaultOp }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("Choose a role");
+  const [selectedOption, setSelectedOption] = useState(defaultOp);
 
   const { setUserType } = useContext(Context);
-
-  const options = ["Admin", "User"];
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);

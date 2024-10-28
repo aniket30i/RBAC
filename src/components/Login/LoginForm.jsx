@@ -1,9 +1,11 @@
 import FrontImage from "../../assets/pic/loginside.jpg";
-import CustomDropdown from "./Dropdown";
+import CustomDropdown from "../../ui/Dropdown";
 import { useContext, useEffect } from "react";
 import Context from "../../context/context";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
+const options = ["Admin", "User"];
 const LoginForm = () => {
   const { userType, setUserType } = useContext(Context);
   const navigate = useNavigate();
@@ -50,7 +52,7 @@ const LoginForm = () => {
               </div>
 
               <form className="flex flex-col gap-6 mt-12 ">
-                <CustomDropdown />
+                <CustomDropdown options={options} defaultOp="Choose a role" />
                 <input
                   type="text"
                   placeholder="Enter Username"
