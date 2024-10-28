@@ -9,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { employees } from "../../data/employees";
+import employees from "../../data/employees.json";
 
 // Register components with ChartJS
 ChartJS.register(
@@ -27,6 +27,8 @@ const employeeCounts = employees.reduce((counts, employee) => {
   counts[month] = (counts[month] || 0) + 1;
   return counts;
 }, {});
+
+console.log("emp C", employeeCounts);
 
 const Graph = () => {
   const months = [

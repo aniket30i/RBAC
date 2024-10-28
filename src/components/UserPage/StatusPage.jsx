@@ -2,7 +2,7 @@ import CustomDropdown from "../../ui/Dropdown";
 import online from "../../assets/icons/online.gif";
 import offline from "../../assets/icons/offline.gif";
 import unknown from "../../assets/icons/unknown.gif";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Context from "../../context/context";
 
 const options = ["Online", "Offline"];

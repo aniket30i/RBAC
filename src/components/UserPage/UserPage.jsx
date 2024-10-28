@@ -2,7 +2,7 @@ import Menu from "../../ui/Menu";
 import { useContext } from "react";
 import Context from "../../context/context";
 import LineChart from "../Graph/LineChart";
-import { employees } from "../../data/employees";
+import employees from "../../data/employees.json";
 import Greetings from "../../ui/Greetings";
 import Appreciation from "../../ui/Appreciation";
 import StatusPage from "./StatusPage";
