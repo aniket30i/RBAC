@@ -3,6 +3,8 @@ import graph from "../assets/icons/graph.png";
 import status from "../assets/icons/status.png";
 import manage from "../assets/icons/manage.png";
 import Context from "../context/context";
+import panda from "../assets/pic/panda-user.png";
+import deer from "../assets/pic/deer-admin.png";
 const Menu = ({ clickedIcon, UserType }) => {
   const [hoveredIcon, setHoveredIcon] = useState("");
   const { setClickedIcon } = useContext(Context);
@@ -25,7 +27,8 @@ const Menu = ({ clickedIcon, UserType }) => {
           {UserType === "User" && (
             <div
               className={`iconCustom  ${
-                clickedIcon === "status" && "border-b-2 border-orange-500"} `}
+                clickedIcon === "status" && "border-b-2 border-orange-500"
+              } `}
               onMouseEnter={() => setHoveredIcon("status")}
               onMouseLeave={() => setHoveredIcon("")}
               onClick={() => setClickedIcon("status")}
@@ -70,8 +73,8 @@ const Menu = ({ clickedIcon, UserType }) => {
           } rounded-lg`}
         >
           <img
-            src="https://icons.iconarchive.com/icons/iconarchive/incognito-animal-2/64/Panda-icon.png"
-            alt="panda"
+            src={`${UserType === "User" ? panda : deer}`}
+            alt="pfp"
             onMouseEnter={() => setHoveredIcon("profile")}
             onMouseLeave={() => setHoveredIcon("")}
             onClick={() => setClickedIcon("profile")}

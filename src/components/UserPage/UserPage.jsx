@@ -10,11 +10,12 @@ import Profile from "./Profile";
 
 const UserPage = () => {
   const { clickedIcon } = useContext(Context);
-  const { UserType } = useContext(Context);
+  const { userType } = useContext(Context);
+  console.log("Checking userType from UserPage", userType);
   console.log(clickedIcon);
   return (
     <div className="relative  bg-zinc-950 h-screen">
-      <Menu clickedIcon={clickedIcon} UserType={UserType} />
+      <Menu clickedIcon={clickedIcon} UserType={userType} />
       {clickedIcon === "overview" && (
         <>
           <Greetings primary="Welcome" secondary="User." />
