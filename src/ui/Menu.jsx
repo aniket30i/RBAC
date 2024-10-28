@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import graph from "../../assets/icons/graph.png";
-import status from "../../assets/icons/status.png";
-import Context from "../../context/context";
+import graph from "../assets/icons/graph.png";
+import status from "../assets/icons/status.png";
+import Context from "../context/context";
 const Menu = ({ clickedIcon, UserType }) => {
   const [hoveredIcon, setHoveredIcon] = useState("");
   const { setClickedIcon } = useContext(Context);
@@ -32,17 +32,28 @@ const Menu = ({ clickedIcon, UserType }) => {
           {hoveredIcon && (
             <div
               className={`absolute ${
-                hoveredIcon === "overview" ? "top-[10px]" : "top-[65px]"
+                hoveredIcon === "overview"
+                  ? "top-[10px]"
+                  : hoveredIcon === "status"
+                  ? "top-[65px]"
+                  : hoveredIcon === "profile" && "top-[200px]"
               } left-[80px] text-white bg-orange-500/80 px-5 rounded-md z-10 `}
             >
               <p className="text-lg font-semibold text-black ">{hoveredIcon}</p>
             </div>
           )}
         </div>
-        <div className="iconBorders">
+        <div
+          className={`${
+            clickedIcon === "profile" && "border-b-2 border-orange-500"
+          } rounded-lg`}
+        >
           <img
             src="https://icons.iconarchive.com/icons/iconarchive/incognito-animal-2/64/Panda-icon.png"
             alt="panda"
+            onMouseEnter={() => setHoveredIcon("profile")}
+            onMouseLeave={() => setHoveredIcon("")}
+            onClick={() => setClickedIcon("profile")}
           />
         </div>
       </div>

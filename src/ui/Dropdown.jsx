@@ -6,12 +6,13 @@ const CustomDropdown = ({ options, defaultOp }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(defaultOp);
 
-  const { setUserType } = useContext(Context);
+  const { setUserType, setCurrentStatus } = useContext(Context);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setUserType(option);
-    setIsOpen(false);
+    setCurrentStatus(option);
+    setIsOpen(!isOpen);
   };
 
   return (

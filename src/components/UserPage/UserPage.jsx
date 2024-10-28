@@ -1,4 +1,4 @@
-import Menu from "../StripMenu/Menu";
+import Menu from "../../ui/Menu";
 import { useContext } from "react";
 import Context from "../../context/context";
 import LineChart from "../Graph/LineChart";
@@ -6,6 +6,7 @@ import { employees } from "../../data/employees";
 import Greetings from "../../ui/Greetings";
 import Appreciation from "../../ui/Appreciation";
 import StatusPage from "./StatusPage";
+import Profile from "./Profile";
 
 const UserPage = () => {
   const { clickedIcon } = useContext(Context);
@@ -37,6 +38,12 @@ const UserPage = () => {
         <>
           <Greetings primary="Your" secondary="Status." />
           <StatusPage />
+        </>
+      )}
+      {clickedIcon === "profile" && (
+        <>
+          <Greetings primary="Your" secondary="Profile." />
+          <Profile />
         </>
       )}
     </div>
