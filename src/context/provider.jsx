@@ -3,7 +3,7 @@ import Context from "./context";
 
 const Provider = ({ children }) => {
   const [userType, setUserType] = useState("");
-  const [clickedIcon, setClickedIcon] = useState("status");
+  const [clickedIcon, setClickedIcon] = useState("overview");
   const [currentStatus, setCurrentStatus] = useState("");
 
   return (

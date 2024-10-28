@@ -9,6 +9,7 @@ export default {
       screens: {
         "custom-xl": "1650px",
         xs: "425px",
+        xxs: "320px",
       },
     },
     plugins: [],
