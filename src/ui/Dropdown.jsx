@@ -12,8 +12,9 @@ const CustomDropdown = ({ options, defaultOp }) => {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-    setUserType(option);
-    console.log("Selected option:", option);
+    if (option === "Admin" || option === "User") {
+      setUserType(option);
+    }
     setCurrentStatus(option);
     setIsOpen(!isOpen);
   };
