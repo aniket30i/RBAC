@@ -25,8 +25,7 @@ const Menu = ({ clickedIcon, UserType }) => {
           {UserType === "User" && (
             <div
               className={`iconCustom  ${
-                clickedIcon === "status" && "border-b-2 border-orange-500"
-              } `}
+                clickedIcon === "status" && "border-b-2 border-orange-500"} `}
               onMouseEnter={() => setHoveredIcon("status")}
               onMouseLeave={() => setHoveredIcon("")}
               onClick={() => setClickedIcon("status")}
