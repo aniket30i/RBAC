@@ -2,7 +2,6 @@ import Menu from "../../ui/Menu";
 import { useContext } from "react";
 import Context from "../../context/context";
 import LineChart from "../Graph/LineChart";
-import employees from "../../data/employees.json";
 import Greetings from "../../ui/Greetings";
 import Appreciation from "../../ui/Appreciation";
 import StatusPage from "./StatusPage";
@@ -32,7 +31,7 @@ const UserPage = () => {
           <div className="flex flex-col justify-center h-1/2 w-1/2 ml-auto mr-auto border-2 p-4 rounded-xl">
             <LineChart />
           </div>
-          <Appreciation employees={employees} />
+          <Appreciation />
         </>
       )}
       {clickedIcon === "status" && (

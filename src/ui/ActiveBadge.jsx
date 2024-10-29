@@ -1,12 +1,15 @@
+import { useEffect, useState } from "react";
 import employees from "../data/employees.json";
+import useFetchEmployees from "../hooks/useFetchEmployees";
 
-const active = employees.filter(
-  (employee) => employee.status === "Online"
-).length;
-const total = employees.length;
-
-console.log("size of online from actbadge comp", active);
 const ActiveBadge = () => {
+  const { employees, loading, error } = useFetchEmployees(
+    "http://localhost:3080/employees"
+  );
+  const active = employees.filter(
+    (employee) => employee.status === "Online"
+  ).length;
+  const total = employees.length;
   return (
     <div className="flex justify-center items-center md:gap-8 mt-16">
       <div className="">

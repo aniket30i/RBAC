@@ -1,4 +1,9 @@
-const Appreciation = ({ employees }) => {
+import useFetchEmployees from "../hooks/useFetchEmployees";
+
+const Appreciation = () => {
+  const { employees, loading, error } = useFetchEmployees(
+    "http://localhost:3080/employees"
+  );
   const totalEmployess = employees.length;
   return (
     <div className="text-white flex justify-center items-center w-1/2 mt-20 ml-auto mr-auto mb-2">

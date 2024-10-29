@@ -9,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import employees from "../../data/employees.json";
+import useFetchEmployees from "../../hooks/useFetchEmployees";
 
 // Register components with ChartJS
 ChartJS.register(
@@ -22,15 +22,17 @@ ChartJS.register(
   Legend
 );
 
-const employeeCounts = employees.reduce((counts, employee) => {
-  const month = employee.monthOfJoining;
-  counts[month] = (counts[month] || 0) + 1;
-  return counts;
-}, {});
-
-console.log("emp C", employeeCounts);
-
 const Graph = () => {
+  const { employees, loading, error } = useFetchEmployees(
+    "http://localhost:3080/employees"
+  );
+
+  const employeeCounts = employees.reduce((counts, employee) => {
+    const month = employee.monthOfJoining;
+    counts[month] = (counts[month] || 0) + 1;
+    return counts;
+  }, {});
+
   const months = [
     "January",
     "February",
