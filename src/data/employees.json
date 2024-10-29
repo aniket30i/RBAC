@@ -1,34 +1,14 @@
 {
   "employees": [
     {
-      "name": "Tina Stan",
-      "email": "tina.morgan@example.com",
+      "name": "Rebeca Stan",
+      "email": "reb.morgan@example.com",
       "dateOfBirth": "1997-04-12",
       "employmentType": "User",
       "monthOfJoining": "August",
       "workAssigned": "Order verification",
       "status": "Offline",
       "id": "139001"
-    },
-    {
-      "name": "Lucy Karter",
-      "email": "lucy.carter@example.com",
-      "dateOfBirth": "1993-07-20",
-      "employmentType": "User",
-      "monthOfJoining": "July",
-      "workAssigned": "Customer support",
-      "status": "Offline",
-      "id": "139003"
-    },
-    {
-      "name": "Barry Brown",
-      "email": "harry.brown@example.com",
-      "dateOfBirth": "1992-02-28",
-      "employmentType": "User",
-      "monthOfJoining": "September",
-      "workAssigned": "Order processing",
-      "status": "Online",
-      "id": "139004"
     },
     {
       "name": "Samantha Jay",
@@ -157,7 +137,7 @@
       "employmentType": "User",
       "monthOfJoining": "October",
       "workAssigned": "Customer satisfaction",
-      "status": "Offline",
+      "status": "Online",
       "id": "139019"
     },
     {
@@ -178,7 +158,7 @@
       "employmentType": "User",
       "monthOfJoining": "March",
       "workAssigned": "Order Processing",
-      "status": "Offline"
+      "status": "Online"
     },
     {
       "id": "139111",
@@ -188,7 +168,7 @@
       "employmentType": "User",
       "monthOfJoining": "June",
       "workAssigned": "Marketing",
-      "status": "Offline"
+      "status": "Online"
     },
     {
       "id": "139556",
@@ -198,7 +178,7 @@
       "employmentType": "User",
       "monthOfJoining": "July",
       "workAssigned": "Parking Management",
-      "status": "Offline"
+      "status": "Online"
     }
   ]
 }

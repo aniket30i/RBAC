@@ -71,104 +71,7 @@ const Management = () => {
   };
 
   return (
-    <div className="text-slate-100  mt-10 relative">
-      <div className="absolute">
-        {editingEmployee && (
-          <form
-            onSubmit={handleUpdateEmployee}
-            className="flex gap-4 p-4 bg-neutral-700 justify-center w-screen translate-y-[]"
-          >
-            <input
-              type="text"
-              className="inputUtil"
-              placeholder="Name"
-              value={editingEmployee.name}
-              onChange={(e) =>
-                setEditingEmployee({ ...editingEmployee, name: e.target.value })
-              }
-              required
-            />
-            <input
-              type="email"
-              className="inputUtil"
-              placeholder="Email"
-              value={editingEmployee.email}
-              onChange={(e) =>
-                setEditingEmployee({
-                  ...editingEmployee,
-                  email: e.target.value,
-                })
-              }
-              required
-            />
-            <input
-              type="date"
-              className="inputUtil"
-              placeholder="Date of Birth"
-              value={editingEmployee.dateOfBirth}
-              onChange={(e) =>
-                setEditingEmployee({
-                  ...editingEmployee,
-                  dateOfBirth: e.target.value,
-                })
-              }
-              required
-            />
-            <input
-              type="text"
-              className="inputUtil"
-              placeholder="Employment Type"
-              value={editingEmployee.employmentType}
-              onChange={(e) =>
-                setEditingEmployee({
-                  ...editingEmployee,
-                  employmentType: e.target.value,
-                })
-              }
-              required
-            />
-            <input
-              type="text"
-              className="inputUtil"
-              placeholder="Month of Joining"
-              value={editingEmployee.monthOfJoining}
-              onChange={(e) =>
-                setEditingEmployee({
-                  ...editingEmployee,
-                  monthOfJoining: e.target.value,
-                })
-              }
-              required
-            />
-            <input
-              type="text"
-              className="inputUtil"
-              placeholder="Work Assigned"
-              value={editingEmployee.workAssigned}
-              onChange={(e) =>
-                setEditingEmployee({
-                  ...editingEmployee,
-                  workAssigned: e.target.value,
-                })
-              }
-              required
-            />
-            <button
-              type="submit"
-              className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
-            >
-              Update
-            </button>
-            <button
-              type="button"
-              className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
-              onClick={() => setEditingEmployee(null)}
-            >
-              Cancel
-            </button>
-          </form>
-        )}
-      </div>
+    <div className="text-slate-100 mt-10">
       <div className="">
         <div>
           <form
@@ -278,7 +181,7 @@ const Management = () => {
           <tbody>
             {currentChunk.map((employee, index) => (
               <tr key={employee.id}>
-                <td>{index + 1}</td>
+                <td>{(currentPage - 1) * itemsPerPage + (index + 1)}</td>
                 <td>{employee.id}</td>
                 <td>{employee.name}</td>
                 <td>{employee.email}</td>
@@ -328,6 +231,103 @@ const Management = () => {
             Next
           </button>
         </div>
+      </div>
+      <div className="mt-2">
+        {editingEmployee && (
+          <form
+            onSubmit={handleUpdateEmployee}
+            className="flex gap-4 p-4 bg-neutral-700 justify-center w-screen translate-y-[]"
+          >
+            <input
+              type="text"
+              className="inputUtil"
+              placeholder="Name"
+              value={editingEmployee.name}
+              onChange={(e) =>
+                setEditingEmployee({ ...editingEmployee, name: e.target.value })
+              }
+              required
+            />
+            <input
+              type="email"
+              className="inputUtil"
+              placeholder="Email"
+              value={editingEmployee.email}
+              onChange={(e) =>
+                setEditingEmployee({
+                  ...editingEmployee,
+                  email: e.target.value,
+                })
+              }
+              required
+            />
+            <input
+              type="date"
+              className="inputUtil"
+              placeholder="Date of Birth"
+              value={editingEmployee.dateOfBirth}
+              onChange={(e) =>
+                setEditingEmployee({
+                  ...editingEmployee,
+                  dateOfBirth: e.target.value,
+                })
+              }
+              required
+            />
+            <input
+              type="text"
+              className="inputUtil"
+              placeholder="Employment Type"
+              value={editingEmployee.employmentType}
+              onChange={(e) =>
+                setEditingEmployee({
+                  ...editingEmployee,
+                  employmentType: e.target.value,
+                })
+              }
+              required
+            />
+            <input
+              type="text"
+              className="inputUtil"
+              placeholder="Month of Joining"
+              value={editingEmployee.monthOfJoining}
+              onChange={(e) =>
+                setEditingEmployee({
+                  ...editingEmployee,
+                  monthOfJoining: e.target.value,
+                })
+              }
+              required
+            />
+            <input
+              type="text"
+              className="inputUtil"
+              placeholder="Work Assigned"
+              value={editingEmployee.workAssigned}
+              onChange={(e) =>
+                setEditingEmployee({
+                  ...editingEmployee,
+                  workAssigned: e.target.value,
+                })
+              }
+              required
+            />
+            <button
+              type="submit"
+              className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
+            >
+              Update
+            </button>
+            <button
+              type="button"
+              className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
+              onClick={() => setEditingEmployee(null)}
+            >
+              Cancel
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );

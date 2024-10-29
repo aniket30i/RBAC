@@ -71,6 +71,7 @@ const useEmployeeActions = (url) => {
       setEmployees((prev) =>
         prev.filter((employee) => employee.employeeId !== employeeId)
       );
+      setRefresh((prev) => !prev);
     } catch (err) {
       setError(err);
     }
