@@ -1,10 +1,27 @@
 // useEmployeeAPI.js
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const useEmployeeActions = (url) => {
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Failed to fetch employees");
+        const data = await response.json();
+        setEmployees(data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEmployees();
+  }, [url]);
 
   const addEmployee = async (newEmployee) => {
     try {
