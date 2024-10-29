@@ -7,6 +7,8 @@ const itemsPerPage = 10;
 
 const Management = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredEmployees, setFilteredEmployees] = useState([]);
   const {
     employees,
     loading,
@@ -70,9 +72,30 @@ const Management = () => {
     }
   };
 
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+
+    const filtered = employees.filter((employee) =>
+      employee.email.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredEmployees(filtered);
+  };
+
+  const iterable = searchQuery ? filteredEmployees : currentChunk;
+
   return (
-    <div className="text-slate-100 mt-10">
-      <div className="">
+    <div className="text-slate-100 mt-10 ">
+      <div className="flex justify-end items-center gap-7 my-3 mx-[14rem] ">
+        <p className="font-semibold">Search Employee</p>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          value={searchQuery}
+          onChange={(e) => handleSearch(e.target.value)}
+          className="inputUtil w-[300px]"
+        />
+      </div>
+      <div>
         <div>
           <form
             onSubmit={handleAddEmployee}
@@ -110,7 +133,7 @@ const Management = () => {
             />
             <input
               type="text"
-              placeholder="D.O.B - (DD-MM-YYYY)"
+              placeholder="D.O.B - (YYYY-MM-DD)"
               className="inputUtil"
               value={newEmployee.dateOfBirth}
               onChange={(e) =>
@@ -179,7 +202,7 @@ const Management = () => {
             </tr>
           </thead>
           <tbody>
-            {currentChunk.map((employee, index) => (
+            {iterable.map((employee, index) => (
               <tr key={employee.id}>
                 <td>{(currentPage - 1) * itemsPerPage + (index + 1)}</td>
                 <td>{employee.id}</td>
