@@ -179,6 +179,166 @@
       "monthOfJoining": "July",
       "workAssigned": "Parking Management",
       "status": "Online"
+    },
+    {
+      "name": "Sophia Turner",
+      "email": "sophia.turner@example.com",
+      "dateOfBirth": "1995-02-15",
+      "employmentType": "User",
+      "monthOfJoining": "April",
+      "workAssigned": "Client Relations",
+      "status": "Offline",
+      "id": "139021"
+    },
+    {
+      "name": "Ethan Reed",
+      "email": "ethan.reed@example.com",
+      "dateOfBirth": "1988-06-07",
+      "employmentType": "Admin",
+      "monthOfJoining": "February",
+      "workAssigned": "Compliance",
+      "status": "Online",
+      "id": "139022"
+    },
+    {
+      "name": "Mia Bennett",
+      "email": "mia.bennett@example.com",
+      "dateOfBirth": "1994-09-17",
+      "employmentType": "User",
+      "monthOfJoining": "March",
+      "workAssigned": "Content Creation",
+      "status": "Online",
+      "id": "139023"
+    },
+    {
+      "name": "Daniel Parker",
+      "email": "daniel.parker@example.com",
+      "dateOfBirth": "1992-12-02",
+      "employmentType": "User",
+      "monthOfJoining": "January",
+      "workAssigned": "Data Analysis",
+      "status": "Offline",
+      "id": "139024"
+    },
+    {
+      "name": "Isabella Lopez",
+      "email": "isabella.lopez@example.com",
+      "dateOfBirth": "1990-05-20",
+      "employmentType": "Admin",
+      "monthOfJoining": "October",
+      "workAssigned": "Strategic Planning",
+      "status": "Online",
+      "id": "139025"
+    },
+    {
+      "name": "Henry Garcia",
+      "email": "henry.garcia@example.com",
+      "dateOfBirth": "1983-08-30",
+      "employmentType": "User",
+      "monthOfJoining": "July",
+      "workAssigned": "Technical Support",
+      "status": "Offline",
+      "id": "139026"
+    },
+    {
+      "name": "Emily Johnson",
+      "email": "emily.johnson@example.com",
+      "dateOfBirth": "1996-11-11",
+      "employmentType": "User",
+      "monthOfJoining": "September",
+      "workAssigned": "Project Coordination",
+      "status": "Online",
+      "id": "139027"
+    },
+    {
+      "name": "Ryan Smith",
+      "email": "ryan.smith@example.com",
+      "dateOfBirth": "1987-03-25",
+      "employmentType": "User",
+      "monthOfJoining": "December",
+      "workAssigned": "Quality Assurance",
+      "status": "Offline",
+      "id": "139028"
+    },
+    {
+      "name": "Ava Taylor",
+      "email": "ava.taylor@example.com",
+      "dateOfBirth": "1999-07-16",
+      "employmentType": "User",
+      "monthOfJoining": "May",
+      "workAssigned": "Market Research",
+      "status": "Online",
+      "id": "139029"
+    },
+    {
+      "name": "Liam Scott",
+      "email": "liam.scott@example.com",
+      "dateOfBirth": "1994-01-09",
+      "employmentType": "Admin",
+      "monthOfJoining": "August",
+      "workAssigned": "Resource Management",
+      "status": "Offline",
+      "id": "139030"
+    },
+    {
+      "name": "Sofia White",
+      "email": "sofia.white@example.com",
+      "dateOfBirth": "1998-10-12",
+      "employmentType": "User",
+      "monthOfJoining": "April",
+      "workAssigned": "Social Media Management",
+      "status": "Online",
+      "id": "139031"
+    },
+    {
+      "name": "Jackson Hall",
+      "email": "jackson.hall@example.com",
+      "dateOfBirth": "1986-09-05",
+      "employmentType": "User",
+      "monthOfJoining": "November",
+      "workAssigned": "Sales Strategy",
+      "status": "Online",
+      "id": "139032"
+    },
+    {
+      "name": "Grace Young",
+      "email": "grace.young@example.com",
+      "dateOfBirth": "1991-12-28",
+      "employmentType": "User",
+      "monthOfJoining": "February",
+      "workAssigned": "Event Planning",
+      "status": "Offline",
+      "id": "139033"
+    },
+    {
+      "name": "Samuel King",
+      "email": "samuel.king@example.com",
+      "dateOfBirth": "1982-04-15",
+      "employmentType": "Admin",
+      "monthOfJoining": "January",
+      "workAssigned": "Training and Development",
+      "status": "Online",
+      "id": "139034"
+    },
+    {
+      "name": "Lily Allen",
+      "email": "lily.allen@example.com",
+      "dateOfBirth": "1993-05-22",
+      "employmentType": "User",
+      "monthOfJoining": "June",
+      "workAssigned": "Product Development",
+      "status": "Online",
+      "id": "139035"
+    },
+    {
+      "name": "Benjamin Adams",
+      "email": "benjamin.adams@example.com",
+      "dateOfBirth": "1990-08-01",
+      "employmentType": "User",
+      "monthOfJoining": "March",
+      "workAssigned": "Logistics Management",
+      "status": "Offline",
+      "id": "139036"
     }
   ]
 }
