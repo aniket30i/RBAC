@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Context from "../../context/context";
 import Greetings from "../../ui/Greetings";
 import LineChart from "../Graph/LineChart";
+import ActiveBadge from "../../ui/ActiveBadge";
 
 const AdminPage = () => {
   const { clickedIcon } = useContext(Context);
@@ -26,6 +27,7 @@ const AdminPage = () => {
           <div className="flex flex-col justify-center h-1/2 w-1/2 ml-auto mr-auto border-2 p-4 rounded-xl">
             <LineChart />
           </div>
+          <ActiveBadge />
         </>
       )}
     </div>
