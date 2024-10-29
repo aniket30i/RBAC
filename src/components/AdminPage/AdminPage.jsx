@@ -21,9 +21,9 @@ const AdminPage = () => {
             <h2 className="text-slate-200 xl:text-2xl">
               Employee{" "}
               <span className="bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
-                Growth
+                Sign-Ups
               </span>{" "}
-              Trend
+              Monthly
             </h2>
           </div>
           <div className="flex flex-col justify-center h-1/2 w-1/2 ml-auto mr-auto border-2 p-4 rounded-xl">
