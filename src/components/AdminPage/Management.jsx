@@ -8,21 +8,58 @@ const Management = () => {
   );
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
+
   return (
-    <div className="text-slate-100 border-t-2 border-slate-100 mt-10">
-      <div className="border-b-2">
+    <div className="text-slate-100  mt-10">
+      <div className="">
         <div className="flex justify-center gap-2">
-          <input type="text" placeholder="Unique ID" className="inputUtil" />
-          <input type="text" placeholder="Full Name" className="inputUtil" />
-          <input type="text" placeholder="Email" className="inputUtil" />
-          <input type="text" placeholder="D.O.B" className="inputUtil" />
-          <select name="posting" id="posting" className="inputUtil">
+          <input
+            type="text"
+            placeholder="Unique ID"
+            className="inputUtil"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="inputUtil"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="inputUtil"
+            required
+          />
+          <input
+            type="text"
+            placeholder="D.O.B"
+            className="inputUtil"
+            required
+          />
+          <select name="posting" id="posting" className="inputUtil" required>
             <option value="">Select Posting</option>
             <option value="admin">admin</option>
             <option value="user">user</option>
           </select>
-          <input type="text" placeholder="Month Joined" className="inputUtil" />
-          <input type="text" placeholder="Assignment" className="inputUtil" />
+          <input
+            type="text"
+            placeholder="Month Joined"
+            className="inputUtil"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Assignment"
+            className="inputUtil"
+            required
+          />
+          <button className="p-2 bg-emerald-600 text-slate-100 font-semibold rounded-lg">
+            Submit
+          </button>
+          <button className="p-2 bg-orange-600 text-slate-100 font-semibold rounded-lg">
+            Clear
+          </button>
         </div>
       </div>
       <div className="w-3/4 ml-auto mr-auto mt-4">
