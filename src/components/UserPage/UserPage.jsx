@@ -6,7 +6,7 @@ import employees from "../../data/employees.json";
 import Greetings from "../../ui/Greetings";
 import Appreciation from "../../ui/Appreciation";
 import StatusPage from "./StatusPage";
-import Profile from "./Profile";
+import Profile from "../../ui/Profile";
 
 const UserPage = () => {
   const { clickedIcon } = useContext(Context);
@@ -44,7 +44,7 @@ const UserPage = () => {
       {clickedIcon === "profile" && (
         <>
           <Greetings primary="Your" secondary="Profile." />
-          <Profile />
+          <Profile support="Administrator" type="User" />
         </>
       )}
     </div>

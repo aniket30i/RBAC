@@ -1,4 +1,4 @@
-const Profile = () => {
+const Profile = ({ support, type }) => {
   return (
     <div>
       <div className="w-1/2 mt-20 ml-auto mr-auto border-t-2 border-b-2 p-8 rounded-xl">
@@ -17,14 +17,15 @@ const Profile = () => {
             <p className="text-orange-500">12345</p>
             <p className="text-orange-500">John Doe</p>
             <p className="text-orange-500">Gkz0E@example.com</p>
-            <p className="text-orange-500">User</p>
+            <p className="text-orange-500">{type}</p>
             <p className="text-orange-500">01/01/2000</p>
           </div>
         </div>
       </div>
       <div className="flex justify-center w-1/2 mt-20 ml-auto mr-auto">
-        <p className="text-orange-300 sm:text-md">
-          * For any change of Information please contact your Administrator
+        <p className="text-slate-100 sm:text-md">
+          * For any change of Information please contact your{" "}
+          <span className="text-orange-500">{support}.</span>
         </p>
       </div>
     </div>

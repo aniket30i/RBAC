@@ -4,6 +4,7 @@ import Context from "../../context/context";
 import Greetings from "../../ui/Greetings";
 import LineChart from "../Graph/LineChart";
 import ActiveBadge from "../../ui/ActiveBadge";
+import Profile from "../../ui/Profile";
 
 const AdminPage = () => {
   const { clickedIcon } = useContext(Context);
@@ -28,6 +29,18 @@ const AdminPage = () => {
             <LineChart />
           </div>
           <ActiveBadge />
+        </>
+      )}
+      {clickedIcon === "manage" && (
+        <>
+          <Greetings primary="Employee" secondary="Management." />
+          <div className="text-white">Lets manage</div>
+        </>
+      )}
+      {clickedIcon === "profile" && (
+        <>
+          <Greetings primary="Your" secondary="Profile." />
+          <Profile support="Tech Team" type="Admin" />
         </>
       )}
     </div>
