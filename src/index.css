@@ -10,3 +10,7 @@
 .iconCustom {
   @apply rounded-lg px-3 p-1 hover:bg-zinc-800;
 }
+
+.inputUtil {
+  @apply text-slate-100 bg-zinc-800 p-2 rounded-lg;
+}
