@@ -5,6 +5,7 @@ import Greetings from "../../ui/Greetings";
 import LineChart from "../Graph/LineChart";
 import ActiveBadge from "../../ui/ActiveBadge";
 import Profile from "../../ui/Profile";
+import Management from "./Management";
 
 const AdminPage = () => {
   const { clickedIcon } = useContext(Context);
@@ -34,7 +35,7 @@ const AdminPage = () => {
       {clickedIcon === "manage" && (
         <>
           <Greetings primary="Employee" secondary="Management." />
-          <div className="text-white">Lets manage</div>
+          <Management />
         </>
       )}
       {clickedIcon === "profile" && (
