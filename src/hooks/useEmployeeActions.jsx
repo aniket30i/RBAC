@@ -5,6 +5,7 @@ const useEmployeeActions = (url) => {
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -21,7 +22,7 @@ const useEmployeeActions = (url) => {
     };
 
     fetchEmployees();
-  }, [url]);
+  }, [url, refresh]);
 
   const addEmployee = async (newEmployee) => {
     try {
@@ -42,7 +43,7 @@ const useEmployeeActions = (url) => {
 
   const updateEmployee = async (updatedEmployee) => {
     try {
-      const response = await fetch(`${url}/${updatedEmployee.employeeId}`, {
+      const response = await fetch(`${url}/${updatedEmployee.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -53,9 +54,7 @@ const useEmployeeActions = (url) => {
       const newEmployee = await response.json();
       setEmployees((prev) =>
         prev.map((employee) =>
-          employee.employeeId === newEmployee.employeeId
-            ? newEmployee
-            : employee
+          employee.id === newEmployee.id ? newEmployee : employee
         )
       );
     } catch (err) {

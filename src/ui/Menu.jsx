@@ -20,7 +20,9 @@ const Menu = ({ clickedIcon, UserType }) => {
             }`}
             onMouseEnter={() => setHoveredIcon("overview")}
             onMouseLeave={() => setHoveredIcon("")}
-            onClick={() => setClickedIcon("overview")}
+            onClick={() => {
+              setClickedIcon("overview");
+            }}
           >
             <img src={graph} alt="graph" className="invert h-10 w-10 " />
           </div>
