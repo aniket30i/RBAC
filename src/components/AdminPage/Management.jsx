@@ -2,11 +2,13 @@ import edit from "../../assets/icons/edit.png";
 import del from "../../assets/icons/del.png";
 import useEmployeeActions from "../../hooks/useEmployeeActions";
 import { useState } from "react";
+import AddEmployees from "./AddEmployees";
 
 const itemsPerPage = 10;
 
 const Management = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [addClicked, setAddClicked] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredEmployees, setFilteredEmployees] = useState([]);
   const {
@@ -45,20 +47,6 @@ const Management = () => {
     setCurrentPage((prev) => Math.max(prev - 1, 1));
   };
 
-  const handleAddEmployee = (e) => {
-    e.preventDefault();
-    addEmployee(newEmployee);
-    setNewEmployee({
-      name: "",
-      email: "",
-      dateOfBirth: "",
-      employmentType: "",
-      monthOfJoining: "",
-      workAssigned: "",
-      status: "Offline",
-      id: "",
-    });
-  };
   const handleUpdateEmployee = (e) => {
     e.preventDefault();
     if (editingEmployee) {
@@ -95,96 +83,17 @@ const Management = () => {
           className="inputUtil w-[300px]"
         />
       </div>
-      <div>
-        <div>
-          <form
-            onSubmit={handleAddEmployee}
-            className="flex justify-center gap-2 sm:flex-col xl:flex-row"
+      <div className="flex md:justify-end xs:justify-center items-center gap-7 my-3 mx-[14rem] ">
+        {addClicked ? (
+          <AddEmployees setAddClicked={setAddClicked} />
+        ) : (
+          <button
+            onClick={() => setAddClicked(true)}
+            className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
           >
-            <input
-              type="text"
-              placeholder="Unique ID - (139xxx)"
-              className="inputUtil"
-              value={newEmployee.id}
-              onChange={(e) =>
-                setNewEmployee({ ...newEmployee, id: e.target.value })
-              }
-              required
-            />
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="inputUtil"
-              value={newEmployee.name}
-              onChange={(e) =>
-                setNewEmployee({ ...newEmployee, name: e.target.value })
-              }
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="inputUtil"
-              value={newEmployee.email}
-              onChange={(e) =>
-                setNewEmployee({ ...newEmployee, email: e.target.value })
-              }
-              required
-            />
-            <input
-              type="text"
-              placeholder="D.O.B - (YYYY-MM-DD)"
-              className="inputUtil"
-              value={newEmployee.dateOfBirth}
-              onChange={(e) =>
-                setNewEmployee({ ...newEmployee, dateOfBirth: e.target.value })
-              }
-              required
-            />
-            <input
-              type="text"
-              placeholder="Post (Admin/User)"
-              className="inputUtil"
-              value={newEmployee.employmentType}
-              onChange={(e) =>
-                setNewEmployee({
-                  ...newEmployee,
-                  employmentType: e.target.value,
-                })
-              }
-              required
-            />
-            <input
-              type="text"
-              placeholder="Month Joined"
-              className="inputUtil"
-              value={newEmployee.monthOfJoining}
-              onChange={(e) => {
-                setNewEmployee({
-                  ...newEmployee,
-                  monthOfJoining: e.target.value,
-                });
-              }}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Assignment"
-              className="inputUtil"
-              value={newEmployee.workAssigned}
-              onChange={(e) =>
-                setNewEmployee({ ...newEmployee, workAssigned: e.target.value })
-              }
-              required
-            />
-            <button
-              className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
-              type="submit"
-            >
-              Add
-            </button>
-          </form>
-        </div>
+            Add Employee
+          </button>
+        )}
       </div>
       <div className="w-3/4 ml-auto mr-auto mt-4 h-[33rem] overflow-y-auto overflow-x-auto">
         <table className="table table-hover table-dark border-2">
@@ -234,25 +143,25 @@ const Management = () => {
         </table>
       </div>
       <div className="flex justify-center gap-2">
-          <button
-            onClick={goToPrevPage}
-            disabled={currentPage === 1}
-            className="bg-slate-100 text-slate-900 p-1 rounded-lg font-semibold"
-          >
-            Previous
-          </button>
-          <span>
-            {"  "}
-            Page {currentPage} of {totalPages}{" "}
-          </span>
-          <button
-            onClick={goToNextPage}
-            disabled={currentPage === totalPages}
-            className="bg-slate-100 text-slate-900 p-1 rounded-lg font-semibold"
-          >
-            Next
-          </button>
-        </div>
+        <button
+          onClick={goToPrevPage}
+          disabled={currentPage === 1}
+          className="bg-slate-100 text-slate-900 p-1 rounded-lg font-semibold"
+        >
+          Previous
+        </button>
+        <span>
+          {"  "}
+          Page {currentPage} of {totalPages}{" "}
+        </span>
+        <button
+          onClick={goToNextPage}
+          disabled={currentPage === totalPages}
+          className="bg-slate-100 text-slate-900 p-1 rounded-lg font-semibold"
+        >
+          Next
+        </button>
+      </div>
       <div className="mt-2">
         {editingEmployee && (
           <form

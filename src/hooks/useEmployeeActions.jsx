@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 const useEmployeeActions = (url) => {
@@ -22,6 +21,8 @@ const useEmployeeActions = (url) => {
     };
 
     fetchEmployees();
+    const interval = setInterval(fetchEmployees, 2000);
+    return () => clearInterval(interval);
   }, [url, refresh]);
 
   const addEmployee = async (newEmployee) => {
