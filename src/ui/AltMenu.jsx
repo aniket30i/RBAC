@@ -22,7 +22,7 @@ const AltMenu = ({ clickedIcon, UserType }) => {
           variants={menuVariants}
           className="absolute top-80 left-0 border-2 border-orange-400 p-3 h-48 rounded-3xl bg-neutral-900"
         >
-          <div className="flex flex-col items-start justify-center gap-3 text-slate-100">
+          <div className="flex flex-col items-start justify-center gap-3 text-gray-300">
             <div onClick={() => setMenuOpen(false)}>
               <p className="text-lg cursor-pointer ">&#10006;</p>
             </div>
@@ -32,14 +32,18 @@ const AltMenu = ({ clickedIcon, UserType }) => {
                 setClickedIcon("overview");
               }}
             >
-              <p>Overview</p>
+              <p>
+                <strong>Overview</strong>
+              </p>
             </div>
             {UserType === "User" && (
               <div
                 className="hover:bg-gray-600 rounded-lg"
                 onClick={() => setClickedIcon("status")}
               >
-                <p>Status</p>
+                <p>
+                  <strong>Status</strong>
+                </p>
               </div>
             )}
             {UserType === "Admin" && (
@@ -47,14 +51,18 @@ const AltMenu = ({ clickedIcon, UserType }) => {
                 onClick={() => setClickedIcon("manage")}
                 className="hover:bg-gray-600 rounded-lg w-full"
               >
-                <p>Manage</p>
+                <p>
+                  <strong>Manage</strong>
+                </p>
               </div>
             )}
             <div
               onClick={() => setClickedIcon("profile")}
               className="hover:bg-gray-600 rounded-lg w-full"
             >
-              <p>Profile</p>
+              <p>
+                <strong>Profile</strong>
+              </p>
             </div>
           </div>
         </motion.div>

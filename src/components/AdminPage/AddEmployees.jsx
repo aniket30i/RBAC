@@ -32,7 +32,7 @@ const AddEmployees = ({ setAddClicked }) => {
     <div>
       <form
         onSubmit={handleAddEmployee}
-        className="xl:flex justify-center gap-2 xs:grid xs:grid-cols-5 xl:flex-row"
+        className="2xl:flex justify-center w-full gap-2 xs:grid xs:grid-cols-2"
       >
         <input
           type="text"
@@ -110,18 +110,20 @@ const AddEmployees = ({ setAddClicked }) => {
           }
           required
         />
-        <button
-          className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
-          type="submit"
-        >
-          Add
-        </button>
-        <button
-          className="p-2 bg-gray-600 hover:bg-gray-700 text-slate-100 font-semibold rounded-lg"
-          onClick={() => setAddClicked(false)}
-        >
-          Cancel
-        </button>
+        <div className="flex gap-2">
+          <button
+            className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg xs:w-24"
+            type="submit"
+          >
+            Add
+          </button>
+          <button
+            className="p-2 bg-gray-600 hover:bg-gray-700 text-slate-100 font-semibold rounded-lg"
+            onClick={() => setAddClicked(false)}
+          >
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   );

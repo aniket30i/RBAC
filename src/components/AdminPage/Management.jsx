@@ -3,6 +3,7 @@ import del from "../../assets/icons/del.png";
 import useEmployeeActions from "../../hooks/useEmployeeActions";
 import { useState } from "react";
 import AddEmployees from "./AddEmployees";
+import { div } from "framer-motion/client";
 
 const itemsPerPage = 10;
 
@@ -72,8 +73,8 @@ const Management = () => {
   const iterable = searchQuery ? filteredEmployees : currentChunk;
 
   return (
-    <div className="text-slate-100 mt-10">
-      <div className="flex justify-end items-center gap-7 my-3 mx-[14rem] ">
+    <div className="text-slate-100 mt-10 min-h-screen">
+      <div className="flex xs:justify-center lg:justify-end items-center xs:gap-3 lg:gap-7 my-3 mx-[14rem] ">
         <p className="font-semibold">Search Employee</p>
         <input
           type="text"
@@ -83,19 +84,21 @@ const Management = () => {
           className="inputUtil w-[300px]"
         />
       </div>
-      <div className="flex md:justify-end xs:justify-center items-center gap-7 my-3 mx-[14rem] ">
+      <div className="w-3/5 ml-auto mr-auto overflow-y-auto">
         {addClicked ? (
           <AddEmployees setAddClicked={setAddClicked} />
         ) : (
-          <button
-            onClick={() => setAddClicked(true)}
-            className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
-          >
-            Add Employee
-          </button>
+          <div className="flex xs:justify-center lg:justify-end">
+            <button
+              onClick={() => setAddClicked(true)}
+              className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
+            >
+              Add Employee
+            </button>
+          </div>
         )}
       </div>
-      <div className="w-3/4 ml-auto mr-auto mt-4 h-[33rem] overflow-y-auto overflow-x-auto">
+      <div className="w-3/4 ml-auto mr-auto mt-4 h-[33rem] overflow-y-auto overflow-x-auto p-1">
         <table className="table table-hover table-dark border-2">
           <thead>
             <tr>
@@ -122,7 +125,7 @@ const Management = () => {
                 <td>{employee.monthOfJoining}</td>
                 <td>{employee.workAssigned}</td>
                 <td>
-                  <div className="flex gap-2">
+                  <div className="flex xs:gap-1md:gap-2 ">
                     <img
                       src={edit}
                       alt="edit"
@@ -166,7 +169,7 @@ const Management = () => {
         {editingEmployee && (
           <form
             onSubmit={handleUpdateEmployee}
-            className="flex gap-4 p-4 bg-neutral-700 justify-center w-screen translate-y-[]"
+            className="xs:grid xs:grid-cols-2 2xl:flex gap-4 p-4 bg-neutral-700 justify-center w-screen translate-y-[]"
           >
             <input
               type="text"
@@ -251,7 +254,7 @@ const Management = () => {
             </button>
             <button
               type="button"
-              className="p-2 bg-emerald-600 hover:bg-emerald-700 text-slate-100 font-semibold rounded-lg"
+              className="p-2 bg-gray-600 hover:bg-gray-700 text-slate-100 font-semibold rounded-lg"
               onClick={() => setEditingEmployee(null)}
             >
               Cancel

@@ -19,7 +19,7 @@ const AdminPage = () => {
   const { userType } = useContext(Context);
   console.log("checking user type from AdminPage", userType);
   return (
-    <div className="relative bg-zinc-950 h-screen">
+    <div className="relative bg-zinc-950 min-h-screen">
       <Menu clickedIcon={clickedIcon} UserType={userType} />
       <AltMenu clickedIcon={clickedIcon} UserType={userType} />
       {clickedIcon === "overview" && (
