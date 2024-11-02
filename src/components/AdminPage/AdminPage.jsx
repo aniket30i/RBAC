@@ -34,7 +34,7 @@ const AdminPage = () => {
               Monthly
             </h2>
           </div>
-          <div className="flex flex-col justify-center h-1/2 w-1/2 ml-auto mr-auto border-2 p-4 rounded-xl">
+          <div className="flex flex-col justify-center w-full sm:w-3/4 md:w-1/2 lg:w-3/5 mx-auto border-2 p-4 rounded-xl lg:h-[50vh] sm:h-[60vh] ">
             <LineChart />
           </div>
           <ActiveBadge />

@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -47,6 +48,7 @@ const Graph = () => {
     "November",
     "December",
   ];
+
   const data = {
     labels: months,
     datasets: [
@@ -60,17 +62,36 @@ const Graph = () => {
     ],
   };
 
+  // Dynamic aspect ratio based on window width
+  const getAspectRatio = () => {
+    if (window.innerWidth < 640) return 1; // mobile
+    if (window.innerWidth < 1024) return 1.5; // tablet
+    return 2; // desktop
+  };
+
+  const [aspectRatio, setAspectRatio] = useState(getAspectRatio());
+
+  useEffect(() => {
+    const handleResize = () => setAspectRatio(getAspectRatio());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
+    aspectRatio: aspectRatio,
     plugins: {
       legend: { position: "bottom" },
-      title: { display: true },
+      title: { display: true, text: "Employees Growth 2024" },
     },
   };
 
   return (
-    <div>
-      <Line data={data} options={options} />
+    <div className="relative h-full">
+      <div className="h-[50vh] sm:h-[60vh] lg:h-[40vh] max-h-[500px]">
+        <Line data={data} options={options} />
+      </div>
     </div>
   );
 };
