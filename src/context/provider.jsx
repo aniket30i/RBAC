@@ -6,7 +6,9 @@ const Provider = ({ children }) => {
     return localStorage.getItem("userType") || "";
   });
   const [clickedIcon, setClickedIcon] = useState("overview");
+  // for menu
   const [currentStatus, setCurrentStatus] = useState("");
+  // for user type
 
   useEffect(() => {
     localStorage.setItem("userType", userType);

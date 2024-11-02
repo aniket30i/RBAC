@@ -101,16 +101,6 @@
       "id": "139015"
     },
     {
-      "name": "David Evans",
-      "email": "david.evans@example.com",
-      "dateOfBirth": "1989-06-29",
-      "employmentType": "User",
-      "monthOfJoining": "March",
-      "workAssigned": "Inventory audit",
-      "status": "Online",
-      "id": "139016"
-    },
-    {
       "name": "Chloe Collins",
       "email": "chloe.collins@example.com",
       "dateOfBirth": "1998-10-30",
@@ -121,16 +111,6 @@
       "id": "139017"
     },
     {
-      "name": "Oscar Brooks",
-      "email": "oscar.brooks@example.com",
-      "dateOfBirth": "1991-12-20",
-      "employmentType": "User",
-      "monthOfJoining": "September",
-      "workAssigned": "Technical writing",
-      "status": "Online",
-      "id": "139018"
-    },
-    {
       "name": "Ella Morgan",
       "email": "ella.morgan@example.com",
       "dateOfBirth": "1996-04-14",
@@ -139,6 +119,26 @@
       "workAssigned": "Customer satisfaction",
       "status": "Online",
       "id": "139019"
+    },
+    {
+      "id": "139020",
+      "name": "Jack Morgan",
+      "email": "jjmorgan@example.com",
+      "dateOfBirth": "1998-05-21",
+      "employmentType": "User",
+      "monthOfJoining": "March",
+      "workAssigned": "Write client emails",
+      "status": "Offline"
+    },
+    {
+      "id": "139022",
+      "name": "Tim Park",
+      "email": "tp@example.com",
+      "dateOfBirth": "1999-08-08",
+      "employmentType": "User",
+      "monthOfJoining": "June",
+      "workAssigned": "Marketing",
+      "status": "Offline"
     }
   ]
 }

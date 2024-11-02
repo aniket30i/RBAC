@@ -150,6 +150,10 @@ const Management = () => {
         </button>
       </div>
       <div className="mt-2">
+        {/* ////////////////////// EDIT UI ///////////////////////////////////// */}
+        {/* ////////////////////// EDIT UI ///////////////////////////////////// */}
+        {/* ////////////////////// EDIT UI ///////////////////////////////////// */}
+        {/* ////////////////////// EDIT UI ///////////////////////////////////// */}
         {editingEmployee && (
           <form
             onSubmit={handleUpdateEmployee}
@@ -179,7 +183,7 @@ const Management = () => {
               required
             />
             <input
-              type="date"
+              type="text"
               className="inputUtil"
               placeholder="Date of Birth"
               value={editingEmployee.dateOfBirth}
