@@ -1,3 +1,4 @@
+import AltMenu from "../../ui/AltMenu";
 import Menu from "../../ui/Menu";
 import { useContext } from "react";
 import Context from "../../context/context";
@@ -6,6 +7,12 @@ import LineChart from "../Graph/LineChart";
 import ActiveBadge from "../../ui/ActiveBadge";
 import Profile from "../../ui/Profile";
 import Management from "./Management";
+import { motion } from "framer-motion";
+
+const menuVariants = {
+  hidden: { x: "-100%", opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
+};
 
 const AdminPage = () => {
   const { clickedIcon } = useContext(Context);
@@ -14,6 +21,7 @@ const AdminPage = () => {
   return (
     <div className="relative bg-zinc-950 h-screen">
       <Menu clickedIcon={clickedIcon} UserType={userType} />
+      <AltMenu clickedIcon={clickedIcon} UserType={userType} />
       {clickedIcon === "overview" && (
         <>
           <Greetings primary="Welcome" secondary="Admin." />

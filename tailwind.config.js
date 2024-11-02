@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Questrial", "sans-serif"], // set Questrial as default sans font
+        sans: ["Questrial", "sans-serif"],
       },
       screens: {
         "custom-xl": "1650px",

@@ -10,7 +10,7 @@ const Menu = ({ clickedIcon, UserType }) => {
   const { setClickedIcon } = useContext(Context);
   console.log("Checking user type from menu", UserType);
   return (
-    <div className="absolute top-80 left-10 border-2 border-slate-100 p-3 h-72 rounded-3xl bg-neutral-900">
+    <div className="absolute top-80 left-10 border-2 border-slate-100 p-3 h-72 rounded-3xl bg-neutral-900 hidden lg:block">
       <div className="flex flex-col gap-20">
         <div className="flex flex-col justify-between gap-2 text-white relative">
           {/* {"/////////////Graph icon//////////////////"} */}

@@ -339,6 +339,16 @@
       "workAssigned": "Logistics Management",
       "status": "Offline",
       "id": "139036"
+    },
+    {
+      "id": "139037",
+      "name": "Nicolas Kelin",
+      "email": "kelin@example.com",
+      "dateOfBirth": "1992-12-12",
+      "employmentType": "User",
+      "monthOfJoining": "November",
+      "workAssigned": "Marketing Supervise",
+      "status": "Offline"
     }
   ]
 }

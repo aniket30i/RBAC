@@ -84,7 +84,7 @@ const Management = () => {
   const iterable = searchQuery ? filteredEmployees : currentChunk;
 
   return (
-    <div className="text-slate-100 mt-10 ">
+    <div className="text-slate-100 mt-10">
       <div className="flex justify-end items-center gap-7 my-3 mx-[14rem] ">
         <p className="font-semibold">Search Employee</p>
         <input
@@ -99,7 +99,7 @@ const Management = () => {
         <div>
           <form
             onSubmit={handleAddEmployee}
-            className="flex justify-center gap-2"
+            className="flex justify-center gap-2 sm:flex-col xl:flex-row"
           >
             <input
               type="text"
@@ -186,8 +186,8 @@ const Management = () => {
           </form>
         </div>
       </div>
-      <div className="w-3/4 ml-auto mr-auto mt-4">
-        <table className="table table-hover table-dark">
+      <div className="w-3/4 ml-auto mr-auto mt-4 h-[33rem] overflow-y-auto overflow-x-auto">
+        <table className="table table-hover table-dark border-2">
           <thead>
             <tr>
               <td>Serial</td>
@@ -232,7 +232,8 @@ const Management = () => {
             ))}
           </tbody>
         </table>
-        <div>
+      </div>
+      <div className="flex justify-center gap-2">
           <button
             onClick={goToPrevPage}
             disabled={currentPage === 1}
@@ -240,12 +241,10 @@ const Management = () => {
           >
             Previous
           </button>
-
           <span>
             {"  "}
             Page {currentPage} of {totalPages}{" "}
           </span>
-
           <button
             onClick={goToNextPage}
             disabled={currentPage === totalPages}
@@ -254,7 +253,6 @@ const Management = () => {
             Next
           </button>
         </div>
-      </div>
       <div className="mt-2">
         {editingEmployee && (
           <form

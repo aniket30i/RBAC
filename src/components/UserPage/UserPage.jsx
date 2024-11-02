@@ -1,4 +1,5 @@
 import Menu from "../../ui/Menu";
+import AltMenu from "../../ui/AltMenu";
 import { useContext } from "react";
 import Context from "../../context/context";
 import LineChart from "../Graph/LineChart";
@@ -14,6 +15,7 @@ const UserPage = () => {
   console.log(clickedIcon);
   return (
     <div className="relative  bg-zinc-950 h-screen">
+      <AltMenu clickedIcon={clickedIcon} UserType={userType} />
       <Menu clickedIcon={clickedIcon} UserType={userType} />
       {clickedIcon === "overview" && (
         <>

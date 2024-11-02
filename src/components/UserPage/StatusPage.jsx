@@ -22,7 +22,7 @@ const StatusPage = () => {
       </div>
       <div className="border-l-2 border-orange-500 mt-24 h-[20rem] sm:ml-auto sm:mr-auto xs:w-full sm:w-1/2 text-white p-4">
         <div>
-          <p className="xl:text-4xl mb-4">Your Current Task Appears below : </p>
+          <p className="xl:text-4xl mb-4">Your Assignment Appears below : </p>
           <div>
             <ul className="list-disc ml-10 xl:text-xl">
               <li>Customer complaints handling</li>
