@@ -38,7 +38,7 @@ const LoginForm = () => {
               <img
                 src={FrontImage}
                 alt="An office building"
-                className="w-full rounded-lg lg:h-[500px]"
+                className="w-full rounded-lg lg:h-[550px]"
               />
             </div>
             <div className=" min-h-[500px] min-w-[300px] flex flex-col">
@@ -66,11 +66,26 @@ const LoginForm = () => {
                 />
               </form>
               <button
-                className="py-3 px-10 rounded-2xl w-full mt-12 text-xl text-slate-100 bg-orange-500 hover:bg-orange-600 transition duration-300"
+                className="py-3 px-10 rounded-2xl w-full mt-8 text-xl text-slate-100 bg-orange-500 hover:bg-orange-600 transition duration-300"
                 onClick={handleLogin}
               >
                 Login
               </button>
+              <div className="mt-2 flex justify-between text-slate-100">
+                <div className="flex gap-1">
+                  <input
+                    type="checkbox"
+                    className="custom-checkbox"
+                    id="check"
+                  />
+                  <label>Remember Me</label>
+                </div>
+                <div>
+                  <a href="">
+                    <p>Forget Password</p>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 .fieldset {
-  @apply border-none rounded-2xl px-3 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-orange-500;
+  @apply p-[0.6rem] px-[2.5rem] pl-[0.1rem] bg-transparent border-b border-white mb-[1.5rem] overflow-hidden text-slate-100 tracking-wider;
 }
 
 .iconCustom {
@@ -13,4 +13,10 @@
 
 .inputUtil {
   @apply text-slate-100 bg-zinc-800 p-2 rounded-lg;
+}
+
+@layer components {
+  .custom-checkbox {
+    accent-color: #f97316;
+  }
 }
