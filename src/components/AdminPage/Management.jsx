@@ -6,30 +6,15 @@ import AddEmployees from "./AddEmployees";
 import { div } from "framer-motion/client";
 
 const itemsPerPage = 10;
+const apiLink = process.env.REACT_APP_API_URL;
 
 const Management = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [addClicked, setAddClicked] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredEmployees, setFilteredEmployees] = useState([]);
-  const {
-    employees,
-    loading,
-    error,
-    addEmployee,
-    updateEmployee,
-    deleteEmployee,
-  } = useEmployeeActions("http://localhost:3080/employees");
-  const [newEmployee, setNewEmployee] = useState({
-    name: "",
-    email: "",
-    dateOfBirth: "",
-    employmentType: "",
-    monthOfJoining: "",
-    workAssigned: "",
-    status: "Offline",
-    id: "",
-  });
+  const { employees, loading, error, updateEmployee, deleteEmployee } =
+    useEmployeeActions("apiLink");
   const [editingEmployee, setEditingEmployee] = useState(null);
 
   if (loading) return <div>Loading...</div>;

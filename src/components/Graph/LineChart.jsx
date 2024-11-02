@@ -23,10 +23,10 @@ ChartJS.register(
   Legend
 );
 
+const apiLink = process.env.REACT_APP_API_URL;
+
 const Graph = () => {
-  const { employees, loading, error } = useFetchEmployees(
-    "http://localhost:3080/employees"
-  );
+  const { employees, loading, error } = useFetchEmployees(apiLink);
 
   const employeeCounts = employees.reduce((counts, employee) => {
     const month = employee.monthOfJoining;
