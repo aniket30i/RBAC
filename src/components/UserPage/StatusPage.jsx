@@ -4,7 +4,7 @@ import Context from "../../context/context";
 
 const StatusPage = () => {
   const { currentStatus } = useContext(Context);
-  console.log(currentStatus);
+
   return (
     <>
       <div className="bg-orange-500 w-full p-2 mt-10">

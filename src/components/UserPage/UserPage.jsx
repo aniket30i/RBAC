@@ -11,8 +11,7 @@ import Profile from "../../ui/Profile";
 const UserPage = () => {
   const { clickedIcon } = useContext(Context);
   const { userType } = useContext(Context);
-  console.log("Checking userType from UserPage", userType);
-  console.log(clickedIcon);
+
   return (
     <div className="relative  bg-zinc-950 h-screen">
       <AltMenu clickedIcon={clickedIcon} UserType={userType} />

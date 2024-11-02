@@ -7,17 +7,10 @@ import LineChart from "../Graph/LineChart";
 import ActiveBadge from "../../ui/ActiveBadge";
 import Profile from "../../ui/Profile";
 import Management from "./Management";
-import { motion } from "framer-motion";
-
-const menuVariants = {
-  hidden: { x: "-100%", opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
-};
 
 const AdminPage = () => {
   const { clickedIcon } = useContext(Context);
   const { userType } = useContext(Context);
-  console.log("checking user type from AdminPage", userType);
   return (
     <div className="relative bg-zinc-950 min-h-screen">
       <Menu clickedIcon={clickedIcon} UserType={userType} />

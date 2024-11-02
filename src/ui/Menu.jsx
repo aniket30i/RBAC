@@ -8,7 +8,7 @@ import deer from "../assets/pic/deer-admin.png";
 const Menu = ({ clickedIcon, UserType }) => {
   const [hoveredIcon, setHoveredIcon] = useState("");
   const { setClickedIcon } = useContext(Context);
-  console.log("Checking user type from menu", UserType);
+
   return (
     <div className="absolute top-80 left-10 border-2 border-slate-100 p-3 h-72 rounded-3xl bg-neutral-900 hidden lg:block">
       <div className="flex flex-col gap-20">

@@ -9,14 +9,12 @@ const options = ["Admin", "User"];
 const LoginForm = () => {
   const { userType, setUserType } = useContext(Context);
   const navigate = useNavigate();
-  console.log(userType);
 
   useEffect(() => {
     setUserType("");
   }, [setUserType]);
 
   const handleLogin = () => {
-    console.log("login clicked");
     if (userType) {
       if (userType === "Admin") {
         navigate("/admin");
