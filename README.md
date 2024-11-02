@@ -19,18 +19,20 @@ This project implements Role-Based Access Control (RBAC) using a frontend stack 
 2 **Install Dependencies**:
 ```bash
 npm install
+```
 
-### To run the application and function properly follow the steps:
+##  To run the application and function properly follow the steps:
 1.	Open console and run the json-server. The port is hard coded to 3080 therefore the command
 
 ```bash
 npx json-server --watch src/data/employees.json –port 3080
-
+```
 
 2.	On another console run the development server : 
 
 ```bash
 npm run dev
+```
 
 
 Check the package.json to ensure all dependencies being installed  
