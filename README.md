@@ -13,27 +13,6 @@ This project implements Role-Based Access Control (RBAC) using a frontend stack 
 ## Getting Started
 
 1. **Clone the repository**:
-
+   ```bash
    git clone https://github.com/your-username/rbac.git
    cd rbac
-   
-2 **Install Dependencies
-```npm install
-
-Every dependency will be installed by itself
-
-
-To run the application and function properly follow the steps
-1.	Open console and run the json-server. The port is hard coded to 3080 therefore the command
-
-```npx json-server --watch src/data/employees.json –port 3080
-
-
-2.	On another console run the development server : 
-
-```npm run dev
-
-
-Check the package.json to ensure all dependencies being installed  
-
-
