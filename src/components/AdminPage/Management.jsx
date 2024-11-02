@@ -3,10 +3,9 @@ import del from "../../assets/icons/del.png";
 import useEmployeeActions from "../../hooks/useEmployeeActions";
 import { useState } from "react";
 import AddEmployees from "./AddEmployees";
-import { div } from "framer-motion/client";
 
 const itemsPerPage = 10;
-const apiLink = process.env.REACT_APP_API_URL;
+// const apiLink = import.meta.env.VITE_API_URL;
 
 const Management = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,7 +13,7 @@ const Management = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredEmployees, setFilteredEmployees] = useState([]);
   const { employees, loading, error, updateEmployee, deleteEmployee } =
-    useEmployeeActions("apiLink");
+    useEmployeeActions("http://localhost:3080/employees");
   const [editingEmployee, setEditingEmployee] = useState(null);
 
   if (loading) return <div>Loading...</div>;
@@ -69,7 +68,7 @@ const Management = () => {
           className="inputUtil w-[300px]"
         />
       </div>
-      <div className="w-3/5 ml-auto mr-auto overflow-y-auto">
+      <div className="w-3/5 ml-auto mr-auto">
         {addClicked ? (
           <AddEmployees setAddClicked={setAddClicked} />
         ) : (
