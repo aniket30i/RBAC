@@ -1,5 +1,4 @@
-# RBAC Project
-
+# RBAC - Role Based Access Control
 This project implements Role-Based Access Control (RBAC) using a frontend stack powered by Vite and React. The application includes charts, UI components, and more to provide a comprehensive user experience.
 
 ## Features
