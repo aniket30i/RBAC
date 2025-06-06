@@ -13,7 +13,7 @@ This project implements Role-Based Access Control (RBAC) using a frontend stack 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/aniket30i/RBAC-assignment1.git
+   git clone https://github.com/aniket30i/RBAC.git
    cd rbac
 2 **Install Dependencies**:
 ```bash
